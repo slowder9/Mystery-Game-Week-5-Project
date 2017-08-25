@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+</head>
+
+<body>
+    <h1>{{ username }}, you have {{ tries }} tries left.</h1>
+
+    <div class ="container">
+      {{ #underscores }}
+        <span>{{ . }}</span>
+      {{ /underscores }}
+    </div>
+
+    <form method="post" action="/guess">
+      <input type="text" name="guess" placeholder="Guess a letter!">
+      <input type="submit" value="Go!">
+    </form>
+
+    <h3>Current score: {{ score }}</h3>
+
+</body>
+</html>
